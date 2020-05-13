@@ -151,9 +151,7 @@ header {
   }
 
   header .small-nav-header {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    float: right;
   }
 
   header .small-nav-header #nav-toggle .hamburger-icon {
