@@ -37,14 +37,22 @@ header {
 }
 
 #off-canvas-wrapper #nav #main-menu {
-  display: flex;
-  justify-content: space-between;
+  text-align: justify;
+  height: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   list-style: none;
   background-color: #006400;
   border-top: 5px solid #ffd700;
   border-bottom: 5px solid #ffd700;
 }
+
+#off-canvas-wrapper #nav #main-menu:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
 
 #off-canvas-wrapper #nav #main-menu .menu-item {
   display: inline-block;
@@ -192,6 +200,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
