@@ -29,11 +29,11 @@ header {
   padding: 0;
   overflow-x: hidden;
   text-transform: uppercase;
+  background-color: #006400;
 }
 
 #off-canvas-wrapper #nav {
   display: block;
-  background-color: #006400;
 }
 
 #off-canvas-wrapper #nav #main-menu {
@@ -187,8 +187,7 @@ header {
   #off-canvas-wrapper.responsive {
     opacity: 1;
     pointer-events: all;
-    display: flex;
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 250px;
     z-index: 9999;
@@ -199,14 +198,7 @@ header {
     transform: translateX(0);
   }
 
-  #off-canvas-wrapper.responsive #nav {
-    display: flex;
-  }
-
   #off-canvas-wrapper.responsive #nav #main-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -216,8 +208,6 @@ header {
   }
 
   #off-canvas-wrapper.responsive #nav #main-menu .menu-item {
-    display: flex;
-    flex-direction: column;
     width: 250px;
     border-bottom: 1px solid #002400;
   }
@@ -264,21 +254,23 @@ header {
   }
 
   #off-canvas-wrapper.responsive #nav #main-menu .menu-item.dropdown .submenu {
-    display: flex;
-    flex-direction: column;
+    display: block;
     position: relative;
     width: 250px;
-    padding-top: 5px;
+    padding-top: 0;
     padding-bottom: 0;
-    background-color: #002400;
+  }
+
+  #off-canvas-wrapper.responsive #nav #main-menu .menu-item.dropdown .submenu:after {
+    display: none;
   }
 
   #off-canvas-wrapper.responsive #nav #main-menu .menu-item.dropdown .submenu .submenu-column {
-    display: flex;
-    flex-direction: column;
     width: 250px;
     padding-left: 0;
     padding-right: 0;
+    background-color: #002400;
+    border-bottom: 2px solid #006400;
   }
 
   #off-canvas-wrapper.responsive #nav #main-menu .menu-item.dropdown .submenu .submenu-column > li {
@@ -286,6 +278,7 @@ header {
     color: #ffd700;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 0;
     box-shadow: 0px 2px #006400;
   }
 
